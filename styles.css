@@ -1,0 +1,99 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+   --Blue-Secondary: #0076FF;
+   --Blue-Background: rgba(0, 118, 255, 0.10);
+   --Blue-Primary: #17172B;
+   --Text: #34343E;
+   --White: #ffffff;
+   --Red: #FF0000;
+}
+
+body{
+    width: 100%;
+    padding: 60px 100px 120px 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.header-title{
+    color: var(--Blue-Primary);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.reset-game{
+    padding: 18px 28px;
+    border-radius: 30px;
+    background: var(--Blue-Background);
+    border: none;
+    color: var(--Blue-Secondary);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: -0.16px;
+    cursor: pointer;
+}
+
+.reset-game:hover{
+    background: var(--Blue-Secondary);
+    color: var(--White);
+}
+.game-board{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 390px;
+}
+
+.game-board-position{
+    border: 1px solid var(--Blue-Background);
+    width: 130px;
+    height: 130px;
+    display: block;
+    align-content: center;
+    text-align: center;
+    background-color: var(--White);
+    cursor: pointer;
+}
+
+.marker-x{
+    background-image: url(./img/close\ \(2\)\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.marker-o{
+    background-image: url(./img/Ellipse\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.marker-preview-x {
+    background-image: url('./img/close (2) 1.svg'); /* Caminho da imagem do X */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Reduz opacidade */
+    cursor: pointer;
+}
+
+.marker-preview-o{
+    background-image: url('./img/Ellipse 1.svg'); /* Caminho da imagem do O */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
