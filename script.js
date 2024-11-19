@@ -20,8 +20,7 @@ const gameBoard = (function(){
     const getBoard = () => board;
 
     const resetBoard = () => {
-        board.splice(0, board.length).fill(null);
-
+        board = Array(9).fill(null);
     };
 
     const markPosition = (marker, index) =>{
@@ -70,7 +69,7 @@ const game = (function(){
 
          //diagonais
          if((gameBoard.getBoard()[0] === marker && gameBoard.getBoard()[4] === marker && gameBoard.getBoard()[8] === marker) ||
-         (gameBoard.getBoard()[2] === marker && gameBoard.getBoard()[4] === marker && gameBoard.getBoard()[8] === marker)){ 
+         (gameBoard.getBoard()[2] === marker && gameBoard.getBoard()[4] === marker && gameBoard.getBoard()[6] === marker)){ 
                return true;
         }
         return false
@@ -133,6 +132,7 @@ const displayController = (function(){
     
    const displayElements = () => positions.forEach(element => {
         const marker = gameBoard.getBoard()[element.getAttribute('data-index')];
+        element.classList.remove('marker-preview-x', 'marker-preview-o');
         if(marker==='X'){
             element.classList.add('marker-x');
         }else if(marker==='O'){
